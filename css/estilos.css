@@ -1,3 +1,11 @@
+/*VARIABLES*/
+:root {
+  --headerColor: #c84b31;
+  --textColorNav: #ecdbba;
+  --colorBlue: #2d4263;
+  --colorBlack: #191919;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,49 +20,47 @@ html {
 body {
   background-color: rgb(255, 255, 255);
   font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* MENU DE NAVEGACION */
 
-header{
+header {
   display: block;
 }
-.navImg{
+.navImg {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 2rem 0 0;
-
 }
 
-.logo{
+.logo {
   font-size: 1.2rem;
-  font-family: 'Licorice', cursive;
-  color: #F5EEDC;
+  font-family: "Licorice", cursive;
+  color: var(--textColorNav);
   font-weight: bold;
   padding: 0 2rem;
   width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-#contador{
-  color: #F5EEDC;
+#contador {
+  color: #f5eedc;
   margin-top: 1rem;
 }
 
-.navItem{
+.navItem {
   font-size: 1rem;
-  color: #F5EEDC;
+  font-weight: 700;
+  color: var(--textColorNav);
   margin: 0 2rem;
   line-height: 4rem;
   text-transform: uppercase;
   width: max-content;
 }
-
-
 
 .cart-container {
   height: 100vh;
@@ -77,55 +83,97 @@ header{
   opacity: 1;
 }
 
-
-
-	
-
-
-
-#conteiner{
+#conteiner {
   padding: 0;
   margin: 0;
 }
 
+/*TITULO*/
+.titulo {
+  font-family: Baskerville, serif;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
 
 /* CARDS */
 
-
-.card{
+#cards{
+  margin-top: 2rem;
+}
+.card {
   text-align: center;
   font-size: 1rem;
   box-shadow: 4px 4px 4px 2px grey;
   background-color: rgb(250, 246, 246);
 }
 
-.card-text{
+.card-text,
+.card-title {
   font-weight: bold;
+  color: var(--colorBlack);
+}
+
+.card-title {
+  text-transform: uppercase;
 }
 
 /* BOTONES CARD */
 
-.btn{
+.btn {
   text-transform: uppercase;
-  font-size: .8rem;
-  border-radius: 25px;
+  background-color: var(--textColorNav);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
   cursor: pointer;
-  text-decoration: none;
-  transition: all .5s;
-}
-.btn:hover{
-  box-shadow: 0px 4px 6px 0px black;
-}
-.btn:active{
+  color: var(--colorBlack);
+  overflow: hidden;
+  padding: 0.5rem 1rem;
   position: relative;
-  top: 2px;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+.btn::after {
+  background-color: var(--colorBlue);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
 }
 
+.btn:hover::after {
+  transform: translate(0, 0);
+}
+.btn:hover {
+  color: var(--textColorNav);
+  transform: scale(1.05);
+  will-change: transform;
+}
 
 /*MODAL*/
-.tituloMod{
+.tituloMod {
   text-align: center;
 }
-.itemMod{
+.itemMod {
   text-align: center;
+}
+
+.eliminar{
+  color: var(--textColorNav);
+  border: 1px solid red;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(175, 11, 11);
+  padding: .2rem;
 }
