@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet"> 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -22,14 +24,14 @@
 </head>
 <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4F091D;">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #C84B31;">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="#" style="color: #F5EEDC;">COMO <br> PERRO <br> Y GATO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse navCentral" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav nav justify-content-end">
               <a class="nav-link active navItem" aria-current="page" href="#" style="color: #F5EEDC;">INCIO</a>
               <a class="nav-link navItem" href="#" style="color: #F5EEDC;">SOBRE NOSOTROS</a>
               <a class="nav-link navItem" href="#" style="color: #F5EEDC;">CONTACTANOS</a>
@@ -55,6 +57,7 @@
                           <div class="col tituloMod">MODELO</div>
                           <div class="col tituloMod">PRECIO</div>
                           <div class="col tituloMod">CANTIDAD</div>
+                          <div class="col tituloMod">SUBTOTAL</div>
                           <div class="col tituloMod">ELIMINAR</div>
                         </div>
                         <div id="listaCarrito" class="row">
@@ -69,7 +72,7 @@
                       </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
-                      <button type="button" class="btn btn-primary"><a href="#" id="finalizarCompra">Finalizar Compra</a></button>
+                      
                     </div>
                    </div>
                   </div>
@@ -82,13 +85,17 @@
       
     </header>
     <section id="principal">
-      <div>
-        <h1 style="text-align: center;">Como perro y gato</h1>
-      </div>
-      
+      <h1 class="titulo" style="text-align: center;">
+        PERRO
+          <span class="letters ampersand">&amp;</span>
+        GATO  
+      </h1>      
     </section>
     <section id="cards">
       <div id="conteiner" class="row" style="justify-content: center; gap: 5rem;">
+
+      </div>
+      <div id="conteinerFin">
 
       </div>
       
@@ -104,9 +111,11 @@
   <script src="./JS/main.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
     AOS.init();
   </script>  
+  
 
 </body>
 </html>
