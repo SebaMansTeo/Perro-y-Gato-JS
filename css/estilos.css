@@ -15,6 +15,7 @@
 html {
   font-size: 100%;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,8 +49,28 @@ header {
 }
 
 #contador {
-  color: #f5eedc;
+  color: #2d4263;
   margin-top: 1rem;
+  font-weight: bolder;
+  padding: .5rem 1rem;
+  border: 1px solid #191919;
+  border-radius: 50%;
+  background-color: #f5eedc;
+  
+}
+
+@media only screen and (min-width: 980px){
+  #contador {
+    color: #2d4263;
+    margin-top: 1rem;
+    font-weight: bolder;
+    padding: .5rem 1rem;
+    border: 1px solid #191919;
+    border-radius: 50%;
+    background-color: #f5eedc;
+    position: relative;
+    right: 60%;
+  }
 }
 
 .navItem {
@@ -124,6 +145,7 @@ header {
   background-color: var(--textColorNav);
   font-size: 0.8rem;
   font-weight: bold;
+  border: 1px solid #191919;
   letter-spacing: 0.1rem;
   cursor: pointer;
   color: var(--colorBlack);
@@ -159,6 +181,21 @@ header {
   transform: scale(1.05);
   will-change: transform;
 }
+#finalizar{
+  border: 1px solid var(--colorBlue);
+}
+#vaciarCarrito{
+  border: 1px solid rgb(163, 15, 15);
+}
+#vaciarCarrito::after{
+  background-color: rgb(163, 15, 15);
+}
+#seguirComp{
+  border: 1px solid rgb(5, 83, 5);
+}
+#seguirComp::after{
+  background-color: rgb(5, 83, 5);
+}
 
 /*MODAL*/
 .tituloMod {
@@ -167,13 +204,54 @@ header {
 .itemMod {
   text-align: center;
 }
+.totalMod{
+  text-align: right;
+}
+.finalizarMod{
+  text-align: right;
+  
+}
 
 .eliminar{
   color: var(--textColorNav);
-  border: 1px solid red;
-  border-radius: 25px;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: rgb(175, 11, 11);
-  padding: .2rem;
+  
+}
+
+
+/*FINALIZAR COMPRA*/
+
+.mensajeCompra{
+  height: 100vh;
+  
+  
+  background-position: center;
+  background-size: contain;
+  opacity: 100%;
+}
+.compra-finalizada, .datos-parrafo, .mensaje-final{
+  font-size: 2rem;
+  color: var(--colorBlack);
+  font-weight: bolder;
+  
+}
+
+
+/*FOOTER*/
+footer{
+  margin-top: 1rem;
+}
+
+
+
+#btnGoogle:hover::after{
+  background-color: #ea4335;
+}
+#btnTwitter:hover::after{
+  background-color: #1da1f2;
+}
+#btnLinkedin:hover::after{
+  background-color: #0a66c2;
+}
+#btnInstagram:hover::after{
+  background-color: #c32aa3;
 }
