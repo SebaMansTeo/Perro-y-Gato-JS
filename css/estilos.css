@@ -56,18 +56,11 @@ header {
   border: 1px solid #191919;
   border-radius: 50%;
   background-color: #f5eedc;
-  
 }
 
 @media only screen and (min-width: 980px){
   #contador {
-    color: #2d4263;
-    margin-top: 1rem;
-    font-weight: bolder;
-    padding: .5rem 1rem;
-    border: 1px solid #191919;
-    border-radius: 50%;
-    background-color: #f5eedc;
+    
     position: relative;
     right: 60%;
   }

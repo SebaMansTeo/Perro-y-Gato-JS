@@ -32,23 +32,25 @@ const cargarProductos = (respuesta) => {
   });
 };
 
-
+//ACTUALIZAR STORAGE Y HACER VISIBLE EL CONTADOR DE CARRITO
 const actualizarStorage = (cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
+  
   if (cart.length > 0) {
     contador.style.display = "inline-block";
+    
   } else {
     contador.style.display = "none";
   }
 };
 
+//DIBUJO EL CARRITO DENTRO DEL MODAL
 const contenedorCarrito = document.querySelector("#listaCarrito");
 const dibujarCarrito = () => {
   let total = 0;
   let cantidadCarrito = 0;
   contenedorCarrito.className = "cart";
   contenedorCarrito.innerHTML = "";
-  
   if (cart.length > 0) {
     cart.forEach((remera, indice) => {
       total = total + remera.precio * remera.cantidad;
@@ -142,6 +144,7 @@ const finalizarCompra = (e) => {
   contenedor.innerHTML = compraFinalizada;
 };
 
+//DIBUJA EL FORMULARIO
 const dibujarFormu = () => {
   contenedor.innerHTML = "";
   const formulario = `
@@ -178,12 +181,14 @@ const dibujarFormu = () => {
   contenedor.innerHTML = formulario;
 };
 
+//MENSAJE FINAL
 const mostrarMensaje = () => {
   const nombreCliente = document.querySelector("#nombre").value;
   const domicilioCliente = document.querySelector("#domicilio").value;
   const ciudadCliente = document.querySelector("#inputCiudad").value;
   const codigoCliente = document.querySelector("#inputCod").value;
-    
+  
+  //VALIDO Q INGRESEN LOS DATOS OBLIGATORIOS
   if(nombreCliente != "" & domicilioCliente != "" & ciudadCliente != "" & codigoCliente != ""){
     contenedor.innerHTML = "";
     let mensaje = `<div id="mensaje" style="display: none" class="mensaje-final text-center">Gracias ${nombreCliente} por su compra!<br> En breve nos pondremos en contacto con usted para pautar la entrega en la calle ${domicilioCliente} </div>`;
